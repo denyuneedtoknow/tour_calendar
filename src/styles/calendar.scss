@@ -1,0 +1,47 @@
+#calendar {
+  max-width: 980px;
+  display: grid; /* Use grid layout */
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(80px, 1fr)
+  ); /* Responsive grid */
+  gap: 1rem; /* Space between items */
+  padding: 1rem;
+  justify-items: center; /* Center items in their grid cells */
+}
+
+.calendar-date {
+  background: white;
+  color: #6200ea;
+  padding: 1rem;
+  border-radius: 10px;
+  border: 1px solid #6200ea;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  max-width: 70px;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+
+  .calendar-day {
+    font-weight: bold;
+    font-size: 1.2rem; /* Larger font for day of the week */
+    margin-bottom: 0.5rem;
+  }
+
+  .calendar-date-text {
+    font-size: 0.9rem; /* Slightly smaller font for the date */
+  }
+}
+
+.calendar-date:hover {
+  background: #ad8cfb;
+  color: white;
+}
+.past-date {
+
+  opacity: 0.6; /* Make it visually less prominent */
+  position: relative; /* For proper positioning of the background image */
+ background: url('/public/images/cross.png') no-repeat center center; /* Add cross image */
+  background-size: contain; /* Ensure the image scales correctly */
+}
