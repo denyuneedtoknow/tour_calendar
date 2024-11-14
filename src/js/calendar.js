@@ -1,4 +1,5 @@
 import tourSchedule from "./schedule";
+import "../styles/main.scss";
 import "../styles/calendar.scss";
 
 // Render calendar

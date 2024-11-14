@@ -1,4 +1,5 @@
 import tourSchedule from "./schedule";
+import "../styles/main.scss";
 import "../styles/details.scss";
 
 // Render details
@@ -9,11 +10,13 @@ const renderDetails = () => {
   if (selectedDateIndex !== null) {
     const { date, city, hotel } = tourSchedule[selectedDateIndex];
     detailsContainer.innerHTML = `
-      <h2>${date}</h2>
+    <div class='detailsWrapper'>
+      <h2 class='date'>${date}</h2>
       <p><strong>City:</strong> ${city}</p>
       <p><strong>Hotel:</strong> ${hotel}</p>
-      <button onclick="window.location.href='../pages/calendar.html'">Back to Calendar</button>
-    `;
+<button onclick="window.location.href='/'">Back to Calendar</button>
+</div>
+`;
   } else {
     detailsContainer.innerHTML = `<p>No date selected.</p>`;
   }

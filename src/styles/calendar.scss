@@ -8,11 +8,15 @@
   gap: 1rem; /* Space between items */
   padding: 1rem;
   justify-items: center; /* Center items in their grid cells */
+  @media screen and (orientation: landscape){
+
+  padding: 5rem;
+  }
 }
 
 .calendar-date {
   background: white;
-  color: #6200ea;
+  color: #06010d;
   padding: 1rem;
   border-radius: 10px;
   border: 1px solid #6200ea;
@@ -39,9 +43,9 @@
   color: white;
 }
 .past-date {
-
   opacity: 0.6; /* Make it visually less prominent */
   position: relative; /* For proper positioning of the background image */
- background: url('/public/images/cross.png') no-repeat center center; /* Add cross image */
+  background: url("/public/images/cross.png") no-repeat center center; /* Add cross image */
+  background-color: white;
   background-size: contain; /* Ensure the image scales correctly */
 }
