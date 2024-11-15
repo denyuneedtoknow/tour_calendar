@@ -154,6 +154,11 @@ const tourSchedule = [
     city: "Dubno",
     hotel: "Готель «Хмеляр», Готель «Візит», м. Дубно, Рівненська обл. Україна",
   },
+  {
+    date: "December 8, 2024",
+    city: "Kyiv",
+    hotel: "Провулок Бишівський",
+  },
 ];
 
 export default tourSchedule;

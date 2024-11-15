@@ -12,7 +12,7 @@ const renderCalendar = () => {
     const dateObj = new Date(date);
     const options = { weekday: "long" }; // Full weekday name
     const dayOfWeek = dateObj.toLocaleDateString("en-US", options);
-    const isPast = dateObj <= today;
+    const isPast = dateObj < today;
 
     const dateElement = document.createElement("div");
     dateElement.className = `calendar-date ${isPast ? "past-date" : ""}`;

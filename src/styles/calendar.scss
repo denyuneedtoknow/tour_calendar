@@ -3,14 +3,13 @@
   display: grid; /* Use grid layout */
   grid-template-columns: repeat(
     auto-fit,
-    minmax(80px, 1fr)
+    minmax(90px, 1fr)
   ); /* Responsive grid */
   gap: 1rem; /* Space between items */
   padding: 1rem;
   justify-items: center; /* Center items in their grid cells */
-  @media screen and (orientation: landscape){
-
-  padding: 5rem;
+  @media screen and (orientation: landscape) {
+    padding: 4rem;
   }
 }
 
@@ -23,14 +22,16 @@
   text-align: center;
   cursor: pointer;
   width: 100%;
-  max-width: 70px;
+  max-width: 80px;
   font-size: 1rem;
   transition: background 0.3s ease;
+  font-family: "Trebuchet MS", sans-serif;
 
   .calendar-day {
     font-weight: bold;
     font-size: 1.2rem; /* Larger font for day of the week */
     margin-bottom: 0.5rem;
+    text-align: center;
   }
 
   .calendar-date-text {
@@ -42,10 +43,14 @@
   background: #ad8cfb;
   color: white;
 }
+.calendar-date:last-child {
+  background-color: rgb(29, 247, 0);
+  color: rgb(2, 75, 25);
+}
 .past-date {
-  opacity: 0.6; /* Make it visually less prominent */
-  position: relative; /* For proper positioning of the background image */
-  background: url("/public/images/cross.png") no-repeat center center; /* Add cross image */
+  opacity: 0.6; 
+  position: relative;
+  background: url("/public/images/cross.png") no-repeat center center; 
   background-color: white;
-  background-size: contain; /* Ensure the image scales correctly */
+  background-size: contain;
 }
