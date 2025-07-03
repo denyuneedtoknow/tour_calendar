@@ -6,10 +6,10 @@
     minmax(90px, 1fr)
   ); /* Responsive grid */
   gap: 1rem; /* Space between items */
-  padding: 1rem;
+  padding: 100px 1rem 1rem; /* Top padding to account for fixed header */
   justify-items: center; /* Center items in their grid cells */
   @media screen and (orientation: landscape) {
-    padding: 4rem;
+    padding: 100px 4rem 4rem;
   }
 }
 
@@ -29,7 +29,7 @@
 
   .calendar-day {
     font-weight: bold;
-    font-size: 1.2rem; /* Larger font for day of the week */
+    font-size: 1rem; /* Larger font for day of the week */
     margin-bottom: 0.5rem;
     text-align: center;
   }
@@ -48,9 +48,9 @@
   color: rgb(2, 75, 25);
 }
 .past-date {
-  opacity: 0.6; 
+  opacity: 0.6;
   position: relative;
-  background: url("/public/images/cross.png") no-repeat center center; 
+  background: url("/public/images/cross.png") no-repeat center center;
   background-color: white;
   background-size: contain;
 }

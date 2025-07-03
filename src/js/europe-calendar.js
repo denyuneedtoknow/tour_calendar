@@ -1,10 +1,10 @@
-import franceTourSchedule from "./france-schedule";
-import { initializeBackground } from "./background-manager";
+import tourSchedule from "./schedule";
+import { setTourBackground } from "./background-manager";
 import "../styles/main.scss";
 import "../styles/calendar.scss";
 
-// Initialize background
-initializeBackground();
+// Set Europe tour background
+setTourBackground("europe");
 
 // Render calendar
 const renderCalendar = () => {
@@ -12,10 +12,8 @@ const renderCalendar = () => {
   const today = new Date();
   today.setHours(0, 0, 0, 0);
 
-  franceTourSchedule.forEach(({ date }, index) => {
-    // Add year 2025 to the date if it's not present
-    const dateWithYear = date.includes("2025") ? date : `${date}, 2025`;
-    const dateObj = new Date(dateWithYear);
+  tourSchedule.forEach(({ date }, index) => {
+    const dateObj = new Date(date);
     const options = { weekday: "long" }; // Full weekday name
     const dayOfWeek = dateObj.toLocaleDateString("en-US", options);
     const isPast = dateObj < today;
@@ -30,8 +28,8 @@ const renderCalendar = () => {
     dateElement.onclick = () => {
       // Save selected index to localStorage and navigate to details page
       localStorage.setItem("selectedDateIndex", index);
-      localStorage.setItem("currentTour", "france");
-      window.location.href = "./details.html";
+      localStorage.setItem("currentTour", "europe");
+      window.location.href = "./europe-details.html";
     };
     calendar.appendChild(dateElement);
   });

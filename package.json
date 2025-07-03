@@ -1,22 +1,25 @@
 {
-  "name": "november_tour_2024",
+  "name": "tour_calendar",
   "version": "1.0.0",
-  "description": "",
+  "description": "Tour calendar application for managing multiple tour schedules",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack serve --open",
+    "build": "webpack --mode production",
+    "start": "webpack serve"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/denyuneedtoknow/november_tour_2024.git"
+    "url": "git+https://github.com/denyuneedtoknow/tour_calendar.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/denyuneedtoknow/november_tour_2024/issues"
+    "url": "https://github.com/denyuneedtoknow/tour_calendar/issues"
   },
-  "homepage": "https://github.com/denyuneedtoknow/november_tour_2024#readme",
+  "homepage": "https://github.com/denyuneedtoknow/tour_calendar#readme",
   "devDependencies": {
     "@babel/core": "^7.26.0",
     "@babel/preset-env": "^7.26.0",

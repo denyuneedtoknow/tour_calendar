@@ -1,10 +1,10 @@
 import franceTourSchedule from "./france-schedule";
-import { initializeBackground } from "./background-manager";
+import { setTourBackground } from "./background-manager";
 import "../styles/main.scss";
 import "../styles/details.scss";
 
-// Initialize background
-initializeBackground();
+// Set France tour background
+setTourBackground("france");
 
 // Render details
 const renderDetails = () => {

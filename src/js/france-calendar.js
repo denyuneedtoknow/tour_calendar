@@ -1,10 +1,10 @@
 import franceTourSchedule from "./france-schedule";
-import { initializeBackground } from "./background-manager";
+import { setTourBackground } from "./background-manager";
 import "../styles/main.scss";
 import "../styles/calendar.scss";
 
-// Initialize background
-initializeBackground();
+// Set France tour background
+setTourBackground("france");
 
 // Render calendar
 const renderCalendar = () => {
@@ -31,7 +31,7 @@ const renderCalendar = () => {
       // Save selected index to localStorage and navigate to details page
       localStorage.setItem("selectedDateIndex", index);
       localStorage.setItem("currentTour", "france");
-      window.location.href = "./details.html";
+      window.location.href = "./france-details.html";
     };
     calendar.appendChild(dateElement);
   });

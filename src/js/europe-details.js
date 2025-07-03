@@ -1,10 +1,10 @@
-import franceTourSchedule from "./france-schedule";
-import { initializeBackground } from "./background-manager";
+import tourSchedule from "./schedule";
+import { setTourBackground } from "./background-manager";
 import "../styles/main.scss";
 import "../styles/details.scss";
 
-// Initialize background
-initializeBackground();
+// Set Europe tour background
+setTourBackground("europe");
 
 // Render details
 const renderDetails = () => {
@@ -12,15 +12,13 @@ const renderDetails = () => {
   const selectedDateIndex = localStorage.getItem("selectedDateIndex");
 
   if (selectedDateIndex !== null) {
-    const { date, city, hotel } = franceTourSchedule[selectedDateIndex];
-    // Add year 2025 to the date if it's not present
-    const dateWithYear = date.includes("2025") ? date : `${date}, 2025`;
+    const { date, city, hotel } = tourSchedule[selectedDateIndex];
     detailsContainer.innerHTML = `
     <div class='detailsWrapper'>
-      <h2 class='date'>${dateWithYear}</h2>
+      <h2 class='date'>${date}</h2>
       <p><strong>City:</strong> ${city}</p>
       <p><strong>Hotel:</strong> ${hotel}</p>
-      <button onclick="window.location.href='/'">Back to Calendar</button>
+      <button onclick="window.location.href='./europe-2024.html'">Back to Calendar</button>
     </div>
 `;
   } else {
